@@ -1,0 +1,66 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  /*background: url("../img/banner.jpg") no-repeat center center;*/
+  
+  
+}
+
+.box{
+  
+  height: auto;
+  background-color: darkslategrey;
+  border: 1px solid #aaaaaa;
+  color: aliceblue;
+  margin: 0 auto;
+  border-radius: 8px;
+
+}
+.item{
+  padding-top: 1em;
+  width:95%;
+  border-bottom: 1px solid #ffffff;
+}
+.alert-message{
+  height: 2em;
+  width: 100%;
+  background-color: darkred;
+  font-weight: 700;
+  color:cornsilk;
+  border-radius: 8px;
+  text-align: center;
+
+}
+.list-header{
+  width: 100%;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 35%;
+}
+.mijumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  
+  box-shadow: 10px 10px 5px #888888;
+ 
+  
+}
+.mijumbotron h1,
+.mijumbotron .h1 {
+  color: inherit;
+}
+.mijumbotron p {
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 200;
+}
+.mijumbotron > hr {
+  border-top-color: #d5d5d5;
+}
+.container .mijumbotron,
+.container-fluid .mijumbotron {
+  border-radius: 6px;
+}
+.jumbotron .micontainer {
+  max-width: 100%;
+}

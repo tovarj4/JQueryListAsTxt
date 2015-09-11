@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="Crea listas de lo que se te antoje, Descargalas y guardala en tu dispositivo, Listas, lista de mercado, lista de tareas, lista de actividades,lista de compras" />
+  <title>Mi Lista</title>
+  
+  <!-- Style Sheet -->
+  <link rel="stylesheet" href="css/style.css"/>
+  <!-- Latest Jquery -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script> 
+  <!-- Generate File Script-->  
+  <script src="js/jquery.generateFile.js"></script>
+  <!-- Javascript Functions -->
+  <script type="text/javascript" src="js/script.js"></script>
+   
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+  <div class="container-fluid" >
+    <div class="row" >
+        
+        
+        
+        
+        <div class="col-md-4 col-md-offset-4" >
+                <div class="mijumbotron">
+                <!--img class="img-thumbnail"  src="img/banner.jpg"  height="100" width="650"/-->
+                <p><img class="img-thumbnail pull-right"  src="img/list.png" height="120" width="100" />
+                <h1><i class="glyphicon glyphicon-th-list"></i>     Mi Lista</h1>
+                
+                </p>
+                <p><i class="glyphicon glyphicon-pencil"></i>   Crea listas de lo que se te antoje
+                
+                </p>
+                <p><i class="glyphicon glyphicon-download-alt"></i>   Descargala y guardala en tu dispositivo
+                
+                </p>
+                
+            </div>
+            
+            <div class="form-group">
+              <label for="text">Nombre de Lista:</label>
+              <input id="Lname" type="text" class="form-control" onkeyup="JsCore.setListName();" placeholder="Nombre de La Lista" />  
+            </div>
+          
+            <div class="form-group">
+              <label for="text">Item:</label>
+              <input id="text" type="text" class="form-control" onkeypress="return JsCore.fillListOnEnter(event);" placeholder="Nombre Item"/>
+            </div>   
+            <div class="text-center">
+                <div class="btn-group btn-group-lg"  >
+                
+                  <button id="btnFillList" class="btn btn-info btn-lg" onclick="JsCore.fillList();" data-toggle="tooltip" title="Agregar Item a Lista">
+                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                      <i class="glyphicon glyphicon-plus"></i>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
+                  </button>
+                  
+                  <button id="btnClear" class="btn btn-default btn-lg" onclick="JsCore.clear();" data-toggle="tooltip" title="Limpiar">
+                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                     <i class="glyphicon glyphicon-refresh"></i>
+                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  </button>
+                  
+                </div>
+            </div>    
+              
+           </div>
+           
+           <div class="col-md-4 col-md-offset-4" >
+              <div class="alert-message" id="alert-message">
+              </div>
+              
+              
+              
+              <form action="core/" method="post" class="text-center">
+              <br />
+               
+                    <div id="box" class="box">
+                        <span id="ListHeader" class="list-header"></span>
+                        <ol id="lista">
+                        </ol>
+                    </div>
+                
+                
+                <div class="form-group">
+                    <textarea class="form-control" id="txtArea">
+                    
+                    </textarea>
+                </div>
+                <a class="btn btn-success form-control" id="download" href="javascript:JsCore.downloadListTxtFile();">Descargar   <i class="glyphicon glyphicon-download"></i></a>
+               
+               </form>        
+        
+         </div>
+    </div>
+  </div>
+
+<script>
+$(document).ready(function(){
+	JsCore.initialize();
+    $('[data-toggle="tooltip"]').tooltip();
+  
+});
+</script>
+</body>
+</html>
